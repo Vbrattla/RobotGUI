@@ -85,13 +85,19 @@ def Thread_videoCapture():
 
                     bilde = ImageTk.PhotoImage(bildePre)
                     #klassifisering = klassifiserer.behandlerData(bildePre)
-                    klassifisering = klassifiserer.behandlerData(bildePos)
+                    klassifisering = klassifiserer.behandlerData(bildePre)
                     #print(opptak)
                     #print(klassifisering )
                     test2 = klassifiserer.fjesLokalisering(klassifisering)
+                    
+                    # TODO: RETURN FRA fjesLokalisering ER SKALERT I HENHOLD TIL 120X160. IKKE 480X640, KOORDINATEN MAA 
+                    # GANGES MED 4 FOER MAN BRUKER DET TIL AA TEGNE REKTANGEL. JOBBER MED EN KLASSE SOM RETURNERER 
+                    # AUTOMATISK SKALERING BASERT PAA INPUT. 
+                    
+                    test2 = test2*4
                     #print(len(test2.shape) )
                     if len(test2.shape) > 1:
-                        frame = cv2.rectangle(frame,(test2[0,0],0),(test2[0,1],128),(0,255,0),3)
+                        frame = cv2.rectangle(frame,(test2[0,0],test2[0,1]),(test2[0,0]+(48*4),test2[0,1]+(64*4)),(0,255,0),3)
                         bildePre = Image.fromarray(frame)
                         bilde = ImageTk.PhotoImage(bildePre)
                         print( test2,test2 )
