@@ -1,0 +1,5 @@
+Delay	0.5	flt	Forsinkelse mellom hvert bilde
+Sti til bilder	C:\Ansikt_Database	str	Sti til treningsdata
+Bilder i pos database	500	int	Antall bilder som er med i den positive treningsvektoren
+Bilder i neg database	500	int	Antall bilder som er med i den negative treningsvektoren
+Deteeksjons terskel	70	int	Terskel for deteksjon av fjes i bilde
