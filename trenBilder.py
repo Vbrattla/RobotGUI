@@ -34,9 +34,8 @@ class HoGTrening:
 
     def genererNyHoGDatabase(self,progressbar):
         # Maksimum treningsdata er 687 positive og 836 negative. Utforer HoG og samler i matriser
-        # Treningsdata har default vindusstorrelse paa bilder: 32x64.
-        # Anvender HoG blokkstorrelse paa 4x4 og cellestorrelse 8x8.
-        # Tilsvarer 432 features per bilde
+        # Treningsdata har default vindusstorrelse paa bilder: 48x64.
+        # Tilsvarer 576 features per bilde
         self.progressBar = progressbar
         if self.param.getParam(2) < len(next(os.walk(self.param.getParam(1)+"\pos"))[2]) and self.param.getParam(2) > 0:
             self.antallPos = self.param.getParam(2)
