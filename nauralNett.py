@@ -113,12 +113,9 @@ class NeuraltNettverk():
             vektorPos =  numpy.array([posHoGVektor[iterasjon,0:]]).T
             test = self.FeedForward(vektorPos)
             test6= self.Backward(targetPos,vektorPos)
-            #print("Input Positive")
-            #print(vektorPos)
 
             vektorNeg =  numpy.array([negHoGVektor[iterasjon,0:]]).T
             test = self.FeedForward(vektorNeg)
             test6= self.Backward(targetNeg,vektorNeg)
-            #print("Input Negative")
-            #print(test)
+
     pass
