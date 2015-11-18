@@ -31,7 +31,6 @@ class ConfGui():
 
         for n in range(0 , len( self.params.dataArray) ):
             self.params.settParam(n, self.tblEntries[n].get() )
-            #print("ConfGui: " + self.tblEntries[n].get() )
 
         self.params.saveConfig()
         return
