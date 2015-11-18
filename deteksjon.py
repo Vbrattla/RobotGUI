@@ -1,3 +1,9 @@
+import numpy
+import cv2
+from PIL import Image
+from neuralNett import NeuraltNettverk
+import fil_IO as IO
+
 class AnsiktsDeteksjon():
     # Klasse for deteksjon av ansikt i videostroemmen
 
